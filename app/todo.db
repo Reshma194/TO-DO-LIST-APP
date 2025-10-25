@@ -1,0 +1,8 @@
+import sqlite3
+
+conn = sqlite3.connect('todo.db')
+cursor = conn.cursor()
+
+cursor.execute("SELECT * FROM task")
+print(cursor.fetchall())
+conn.close()
